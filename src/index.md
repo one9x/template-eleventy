@@ -1,15 +1,52 @@
 ---
 layout: layout.njk
-title: Eleventy on One9x Pages
+title: Eleventy template — One9x Pages
 ---
 
-# Eleventy
+<div class="wrap">
+  <p class="eyebrow">One9x Pages &middot; template</p>
+  <h1>Eleventy</h1>
+  <p class="lede">
+    This page is the live output of a template repository. Copy it and you have
+    a Eleventy site that deploys itself to a URL of your own on every push.
+  </p>
 
-Deployed to One9x Pages.
+  <div class="row">
+    <a class="btn btn-1" href="https://github.com/one9x/template-eleventy/generate">Use this template &rarr;</a>
+    <a class="btn btn-2" href="https://github.com/one9x/template-eleventy">View the repo</a>
+  </div>
 
-[About](/about/)
+  <h2>Start from it</h2>
+  <ol>
+    <li><strong>Use this template</strong> on GitHub to get your own copy.</li>
+    <li>Create a site and a token:
+<pre><span class="p">$ </span>one9x pages create mysite
+<span class="p">$ </span>one9x tokens create "github actions"</pre></li>
+    <li>In the new repo, under <strong>Settings &rarr; Secrets and variables &rarr;
+      Actions</strong>, add the variable <code>ONE9X_SITE</code>
+      (<code>mysite</code>) and the secret <code>ONE9X_TOKEN</code>.</li>
+    <li>Push. A pull request gets a preview URL; <code>main</code> goes live.</li>
+  </ol>
 
-<p class="note">
-Eleventy writes a real HTML file per page, so this is deployed <em>without</em>
-<code>--spa</code>.
-</p>
+  <h2>Or deploy what you already have</h2>
+<pre><span class="p">$ </span>npx @11ty/eleventy
+<span class="p">$ </span>one9x pages release ./_site --site mysite --deploy</pre>
+
+  <h2>What this template sets up</h2>
+  <table class="facts">
+    <tbody>
+    <tr><th>Build command</th><td><code>npx @11ty/eleventy</code></td></tr>
+    <tr><th>Output folder</th><td><code>_site</code></td></tr>
+    <tr><th>SPA fallback</th><td>not used &mdash; a real HTML file per route</td></tr>
+    <tr><th>CI</th><td>preview URL on every pull request, publish on <code>main</code></td></tr>
+  </tbody>
+  </table>
+
+  <nav class="local"><a href="/about/">A second page &rarr;</a><span style="color:var(--wire)"> &mdash; a real file, written at build time.</span></nav>
+
+  <footer>
+    Hosted on <a href="https://one9x.com">One9x Pages</a> &middot;
+    <a href="https://one9x.com/docs/frameworks/eleventy">Eleventy guide</a> &middot;
+    <a href="https://one9x.com/docs">Docs</a>
+  </footer>
+</div>

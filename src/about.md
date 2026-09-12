@@ -1,10 +1,22 @@
 ---
 layout: layout.njk
-title: About
+title: A real file — Eleventy template
 ---
 
-# About
-
-This page is `_site/about/index.html`.
-
-[Home](/)
+<div class="wrap">
+  <p class="eyebrow">One9x Pages &middot; template</p>
+  <h1>A real file</h1>
+  <p class="lede">
+    This page existed on disk before anyone asked for it &mdash; the build wrote
+    it. That is why this template deploys without <code>--spa</code>: an
+    unmatched path here is a genuine 404 and should say so.
+  </p>
+  <div class="row">
+    <a class="btn btn-1" href="https://github.com/one9x/template-eleventy/generate">Use this template &rarr;</a>
+    <a class="btn btn-2" href="/">Back</a>
+  </div>
+  <footer>
+    Hosted on <a href="https://one9x.com">One9x Pages</a> &middot;
+    <a href="https://one9x.com/docs/frameworks/eleventy">Eleventy guide</a>
+  </footer>
+</div>
